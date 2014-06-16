@@ -1,0 +1,28 @@
+{
+  "browser": true,
+  "eqeqeq": true,
+  "eqnull": true,
+  "expr": true,
+  "immed": true,
+  "globalstrict": true,
+  "latedef": true,
+  "maxdepth": 3,
+  "maxparams": 10,
+  "maxcomplexity": 15,
+  "multistr": true,
+  "newcap": true,
+  "noarg": true,
+  "noempty": true,
+  "nonew": true,
+  "onecase": true,
+  "quotmark": "single",
+  "smarttabs": true,
+  "sub": true,
+  "undef": true,
+  "globals": {
+    "module": true,
+    "exports": true,
+    "require": true,
+    "console": true
+  }
+}
