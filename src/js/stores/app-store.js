@@ -8,9 +8,9 @@ var CHANGE_EVENT = 'change';
 
 
 var _catalog = [
-    {id:1, title: 'Widget #1', cost: 1, inCart: false},
-    {id:2, title: 'Widget #2', cost: 2, inCart: false},
-    {id:3, title: 'Widget #3', cost: 3, inCart: false}
+    {id:1, title: 'Widget #1', cost: 1},
+    {id:2, title: 'Widget #2', cost: 2},
+    {id:3, title: 'Widget #3', cost: 3}
   ];
 
 var _cartItems = [];
@@ -37,12 +37,12 @@ function _decreaseItem(index){
 function _addItem(item){
   if(!item.inCart){
     item['qty'] = 1;
+    item['inCart'] = true;
     item.inCart = true;
     _cartItems.push(item);
   }
   else {
     _cartItems.forEach(function(cartItem, i){
-      console.log(cartItem);
       if(cartItem.id===item.id){
         _increaseItem(i);
       }
