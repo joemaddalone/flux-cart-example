@@ -1,9 +1,10 @@
+'use strict';
 var AppDispatcher = require('../dispatcher/app-dispatcher');
 var EventEmitter = require('events').EventEmitter;
 var AppConstants = require('../constants/app-constants');
 var merge = require('react/lib/merge');
 
-var CHANGE_EVENT = "change";
+var CHANGE_EVENT = 'change';
 
 
 var _catalog = [
@@ -14,26 +15,10 @@ var _catalog = [
 
 var _cartItems = [];
 
-function _addItem(item){
-  if(!item.inCart){
-    item['qty'] = 1;
-    item.inCart = true;
-    _cartItems.push(item)
-  }
-  else {
-    _cartItems.forEach(function(cartItem, i){
-      console.log(cartItem);
-      if(cartItem.id===item.id){
-        _increaseItem(i)
-      }
-    })
-  }
-
-}
 
 function _removeItem(index){
   _cartItems[index].inCart = false;
-  _cartItems.splice(index, 1)
+  _cartItems.splice(index, 1);
 }
 
 function _increaseItem(index){
@@ -45,11 +30,27 @@ function _decreaseItem(index){
     _cartItems[index].qty--;
   }
   else {
-    _removeItem(index)
+    _removeItem(index);
   }
-
-
 }
+
+function _addItem(item){
+  if(!item.inCart){
+    item['qty'] = 1;
+    item.inCart = true;
+    _cartItems.push(item);
+  }
+  else {
+    _cartItems.forEach(function(cartItem, i){
+      console.log(cartItem);
+      if(cartItem.id===item.id){
+        _increaseItem(i);
+      }
+    });
+  }
+}
+
+
 
 var AppStore = merge(EventEmitter.prototype, {
   emitChange:function(){

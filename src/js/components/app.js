@@ -1,4 +1,5 @@
 /** @jsx React.DOM */
+'use strict';
 var React = require('react'),
     Catalog = require('./app-catalog'),
     Cart = require('./app-cart.js');
@@ -7,6 +8,7 @@ var React = require('react'),
 var APP =
   React.createClass({
     render:function(){
+      /* jshint ignore:start */
       return (
           <div>
             <h2>Let Shop</h2>
@@ -16,6 +18,7 @@ var APP =
             <Cart />
           </div>
         )
+      /* jshint ignore:end */
     }
   });
 

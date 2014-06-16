@@ -1,5 +1,5 @@
 /** @jsx React.DOM */
-
+'use strict';
 var React = require('react'),
     AppStore = require('../stores/app-store'),
     Increase = require('./app-increase.js'),
@@ -7,7 +7,7 @@ var React = require('react'),
     RemoveFromCart = require('./app-removefromcart.js');
 
 function cartItems(){
-  return {items: AppStore.getCart()}
+  return {items: AppStore.getCart()};
 }
 
 
@@ -17,18 +17,18 @@ var Cart =
       return cartItems();
     },
     componentWillMount:function(){
-      AppStore.addChangeListener(this._onChange)
+      AppStore.addChangeListener(this._onChange);
     },
     _onChange:function(){
-      console.warn('change!')
       this.setState(cartItems());
     },
     render:function(){
         var total = 0;
         var items = this.state.items.map(function(item, i){
-          var subtotal = item.cost*item.qty
+          var subtotal = item.cost*item.qty;
            // while we're in here we might as well tally up our total as well.
-          total+=subtotal
+          total+=subtotal;
+          /* jshint ignore:start */
           return (
             <tr key={i}>
               <td><RemoveFromCart key={'remove_' + i} index={i} /></td>
@@ -41,7 +41,9 @@ var Cart =
               <td>${subtotal}</td>
             </tr>
           )
-        })
+          /* jshint ignore:end */
+        });
+      /* jshint ignore:start */
       return (
           <table className="table">
           <thead>
@@ -64,6 +66,7 @@ var Cart =
           </tfoot>
           </table>
         )
+      /* jshint ignore:end */
     }
   });
 

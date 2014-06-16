@@ -1,3 +1,4 @@
+'use strict';
 var Dispatcher = require('./dispatcher');
 var merge = require('react/lib/merge');
 

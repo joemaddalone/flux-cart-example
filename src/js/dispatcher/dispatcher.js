@@ -1,3 +1,4 @@
+'use strict';
 var Promise = require('es6-promise').Promise;
 var merge = require('react/lib/merge');
 
