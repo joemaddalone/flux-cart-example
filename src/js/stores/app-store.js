@@ -38,7 +38,6 @@ function _addItem(item){
   if(!item.inCart){
     item['qty'] = 1;
     item['inCart'] = true;
-    item.inCart = true;
     _cartItems.push(item);
   }
   else {
