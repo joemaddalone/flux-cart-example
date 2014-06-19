@@ -11,7 +11,7 @@ var APP =
       /* jshint ignore:start */
       return (
           <div>
-            <h2>Let Shop</h2>
+            <h2>Let's Shop</h2>
             <Catalog />
             <hr />
             <h2>Cart</h2>
