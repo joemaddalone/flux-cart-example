@@ -24,7 +24,9 @@ var Catalog =
 
       return (
         <Template>
-          {items}
+          <div className="row">
+            {items}
+          </div>
         </Template>
         )
       /* jshint ignore:end */

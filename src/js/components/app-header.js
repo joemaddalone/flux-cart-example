@@ -1,7 +1,8 @@
 /** @jsx React.DOM */
 'use strict';
 var React = require('react'),
-    Router = require('react-router-component');
+    Router = require('react-router-component'),
+    CartSummary = require('../components/app-cartsummary');
 var Link = Router.Link;
 
 var Header =
@@ -9,11 +10,13 @@ var Header =
     render:function(){
       /* jshint ignore:start */
       return (
-        <div>
-            <h1>Lets Shop</h1>
-           <Link href={'/cart'}>Cart</Link>
+        <div className="row">
+        <div className="col-sm-6"><h1>Lets Shop</h1></div>
+          <div className="col-sm-2 col-sm-push-3">
+          <br />
+            <CartSummary />
+          </div>
         </div>
-
       );
       /* jshint ignore:end */
     }

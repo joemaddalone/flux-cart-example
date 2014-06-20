@@ -26,8 +26,10 @@ var CatalogDetail =
             <img src={this.state.item.img} alt="" />
             <p>{this.state.item.description}</p>
             <p>${this.state.item.cost}</p>
-            <AddToCart item={this.state.item} />
-            <Link href={'/'}>Continue Shopping</Link>
+            <div className="btn-group btn-group-sm">
+              <AddToCart item={this.state.item} />
+              <Link href={'/'} className="btn btn-default">Continue Shopping</Link>
+            </div>
           </Template>
         )
       /* jshint ignore:end */
