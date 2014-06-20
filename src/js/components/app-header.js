@@ -1,9 +1,7 @@
 /** @jsx React.DOM */
 'use strict';
 var React = require('react'),
-    Router = require('react-router-component'),
     CartSummary = require('../components/app-cartsummary');
-var Link = Router.Link;
 
 var Header =
   React.createClass({

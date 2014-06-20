@@ -1,6 +1,6 @@
 'use strict';
-var AppDispatcher = require('../dispatcher/app-dispatcher');
-var AppConstants = require('../constants/app-constants');
+var AppDispatcher = require('../dispatcher/app-dispatcher'),
+    AppConstants = require('../constants/app-constants');
 
 var AppActions = {
   addItem:function(item){

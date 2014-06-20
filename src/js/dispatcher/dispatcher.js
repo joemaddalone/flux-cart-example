@@ -1,6 +1,6 @@
 'use strict';
-var Promise = require('es6-promise').Promise;
-var merge = require('react/lib/merge');
+var Promise = require('es6-promise').Promise,
+    merge = require('react/lib/merge');
 
 var _callbacks = [];
 var _promises = [];

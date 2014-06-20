@@ -1,10 +1,10 @@
 /** @jsx React.DOM */
 'use strict';
-var React = require('react');
-var AddToCart = require('./app-addtocart.js');
-var Template = require('./app-template.js');
-var Link = require('react-router-component').Link;
-var AppStore = require('../stores/app-store.js');
+var React = require('react'),
+    AddToCart = require('./app-addtocart.js'),
+    Template = require('./app-template.js'),
+    Link = require('react-router-component').Link,
+    AppStore = require('../stores/app-store.js');
 
 
 function getCatalogItem(index){

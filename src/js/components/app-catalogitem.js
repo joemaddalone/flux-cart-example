@@ -1,8 +1,8 @@
 /** @jsx React.DOM */
 'use strict';
-var React = require('react');
-var AddToCart = require('../components/app-addtocart.js');
-var Link = require('react-router-component').Link;
+var React = require('react'),
+    AddToCart = require('../components/app-addtocart.js'),
+    Link = require('react-router-component').Link;
 
 var CatalogItem =
   React.createClass({

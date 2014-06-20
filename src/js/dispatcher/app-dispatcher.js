@@ -1,6 +1,6 @@
 'use strict';
-var Dispatcher = require('./dispatcher');
-var merge = require('react/lib/merge');
+var Dispatcher = require('./dispatcher'),
+    merge = require('react/lib/merge');
 
 var AppDispatcher = merge(Dispatcher.prototype, {
 

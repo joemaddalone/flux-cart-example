@@ -1,8 +1,8 @@
 'use strict';
-var AppDispatcher = require('../dispatcher/app-dispatcher');
-var EventEmitter = require('events').EventEmitter;
-var AppConstants = require('../constants/app-constants');
-var merge = require('react/lib/merge');
+var AppDispatcher = require('../dispatcher/app-dispatcher'),
+    EventEmitter = require('events').EventEmitter,
+    AppConstants = require('../constants/app-constants'),
+    merge = require('react/lib/merge');
 
 var CHANGE_EVENT = 'change';
 
