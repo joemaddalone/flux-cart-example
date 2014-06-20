@@ -2,8 +2,7 @@
 'use strict';
 var React = require('react'),
     AppStore = require('../stores/app-store'),
-    CatalogItem = require('./app-catalogitem.js'),
-    Template = require('./app-template.js');
+    CatalogItem = require('./app-catalogitem.js');
 
 function getCatalog(){
   return {items: AppStore.getCatalog()};
@@ -32,11 +31,9 @@ var Catalog =
       });
 
       return (
-        <Template>
           <div className="row">
             {items}
           </div>
-        </Template>
         )
       /* jshint ignore:end */
     }

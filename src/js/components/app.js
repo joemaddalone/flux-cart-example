@@ -17,11 +17,13 @@ var APP =
     render:function(){
       /* jshint ignore:start */
       return (
+        <Template>
         <Locations hash>
           <Location path="/" handler={Catalog} />
           <Location path="/cart" handler={Cart} />
           <Location path="/item/:item" handler={CatalogDetail} />
         </Locations>
+        </Template>
         )
       /* jshint ignore:end */
     }

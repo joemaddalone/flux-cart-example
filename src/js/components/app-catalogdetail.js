@@ -2,7 +2,6 @@
 'use strict';
 var React = require('react'),
     AddToCart = require('./app-addtocart.js'),
-    Template = require('./app-template.js'),
     Link = require('react-router-component').Link,
     AppStore = require('../stores/app-store.js');
 
@@ -28,7 +27,7 @@ var CatalogDetail =
     render:function(){
       /* jshint ignore:start */
       return (
-          <Template>
+          <div>
             <h2>{this.state.item.title}</h2>
             <img src={this.state.item.img} alt="" />
             <p>{this.state.item.description}</p>
@@ -37,7 +36,7 @@ var CatalogDetail =
               <AddToCart item={this.state.item} />
               <Link href={'/'} className="btn btn-default">Continue Shopping</Link>
             </div>
-          </Template>
+          </div>
         )
       /* jshint ignore:end */
     }

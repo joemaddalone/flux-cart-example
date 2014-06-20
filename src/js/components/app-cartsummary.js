@@ -24,9 +24,15 @@ var CartSummary =
     },
     render:function(){
       /* jshint ignore:start */
-      return (
-          <Link className="btn btn-success" href={'/cart'}>Cart : Items: {this.state.qty} / ${this.state.total}</Link>
-       )
+      return  (<div>
+                <Link
+                globalHash={true}
+                href={'/cart'}
+                className="btn btn-success">
+                Cart : Items: {this.state.qty} / ${this.state.total}
+              </Link>
+              </div>
+              )
       /* jshint ignore:end */
     }
   });

@@ -5,8 +5,7 @@ var React = require('react'),
     Increase = require('./app-increase'),
     Decrease = require('./app-decrease'),
     RemoveFromCart = require('./app-removefromcart'),
-    Link = require('react-router-component').Link,
-    Template = require('./app-template');
+    Link = require('react-router-component').Link;
 
 function cartItems(){
   return {items: AppStore.getCart()};
@@ -50,7 +49,7 @@ var Cart =
         });
       /* jshint ignore:start */
       return (
-        <Template>
+        <div>
           <table className="table">
           <thead>
             <tr>
@@ -72,7 +71,7 @@ var Cart =
           </tfoot>
           </table>
           <Link href={'/'}>Continue Shopping</Link>
-        </Template>
+        </div>
         )
       /* jshint ignore:end */
     }
