@@ -2,9 +2,11 @@
 'use strict';
 var React = require('react'),
     AppStore = require('../stores/app-store'),
-    Increase = require('./app-increase.js'),
-    Decrease = require('./app-decrease.js'),
-    RemoveFromCart = require('./app-removefromcart.js');
+    Increase = require('./app-increase'),
+    Decrease = require('./app-decrease'),
+    RemoveFromCart = require('./app-removefromcart'),
+    Link = require('react-router-component').Link,
+    Template = require('./app-template');
 
 function cartItems(){
   return {items: AppStore.getCart()};
@@ -18,6 +20,9 @@ var Cart =
     },
     componentWillMount:function(){
       AppStore.addChangeListener(this._onChange);
+    },
+    componentWillUnmount:function(){
+      AppStore.removeChangeListener(this._onChange);
     },
     _onChange:function(){
       this.setState(cartItems());
@@ -45,6 +50,7 @@ var Cart =
         });
       /* jshint ignore:start */
       return (
+        <Template>
           <table className="table">
           <thead>
             <tr>
@@ -65,6 +71,8 @@ var Cart =
             </tr>
           </tfoot>
           </table>
+          <Link href={'/'}>Continue Shopping</Link>
+        </Template>
         )
       /* jshint ignore:end */
     }

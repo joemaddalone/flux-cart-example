@@ -10,7 +10,7 @@ var AddToCart =
     },
     render:function(){
       /* jshint ignore:start */
-      return <button onClick={this.handleClick}>Add To Cart</button>
+      return <button type="button" className="btn btn-default" onClick={this.handleClick}>Add To Cart</button>
       /* jshint ignore:end */
     }
   });

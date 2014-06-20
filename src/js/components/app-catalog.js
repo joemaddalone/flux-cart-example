@@ -2,7 +2,8 @@
 'use strict';
 var React = require('react'),
     AppStore = require('../stores/app-store'),
-    AddToCart = require('./app-addtocart.js');
+    CatalogItem = require('./app-catalogitem.js'),
+    Template = require('./app-template.js');
 
 function getCatalog(){
   return {items: AppStore.getCatalog()};
@@ -18,13 +19,13 @@ var Catalog =
     render:function(){
       /* jshint ignore:start */
       var items = this.state.items.map(function(item, i){
-        return <tr key={i}><td>{item.title}</td><td>${item.cost}</td><td> <AddToCart item={item} /></td></tr>
+        return <CatalogItem key={i} item={item} />
       });
 
       return (
-          <table className="table table-hover">
-            {items}
-          </table>
+        <Template>
+          {items}
+        </Template>
         )
       /* jshint ignore:end */
     }
