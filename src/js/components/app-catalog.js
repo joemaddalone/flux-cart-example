@@ -16,6 +16,15 @@ var Catalog =
     getInitialState:function(){
       return getCatalog();
     },
+    componentWillMount:function(){
+      AppStore.addChangeListener(this._onChange);
+    },
+    componentWillUnmount:function(){
+      AppStore.removeChangeListener(this._onChange);
+    },
+    _onChange:function(){
+      this.setState(getCatalog());
+    },
     render:function(){
       /* jshint ignore:start */
       var items = this.state.items.map(function(item, i){
