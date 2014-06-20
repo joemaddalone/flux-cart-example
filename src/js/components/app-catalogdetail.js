@@ -8,7 +8,6 @@ var React = require('react'),
 
 
 function getCatalogItem(index){
-  console.log(AppStore.getCatalog()[index]);
   return {item: AppStore.getCatalog()[index]};
 }
 
@@ -17,7 +16,15 @@ var CatalogDetail =
     getInitialState:function(){
       return getCatalogItem(this.props.item);
     },
-
+    componentWillMount:function(){
+      AppStore.addChangeListener(this._onChange);
+    },
+    componentWillUnmount:function(){
+      AppStore.removeChangeListener(this._onChange);
+    },
+    _onChange:function(){
+      this.setState(getCatalogItem(this.props.item));
+    },
     render:function(){
       /* jshint ignore:start */
       return (
@@ -25,7 +32,7 @@ var CatalogDetail =
             <h2>{this.state.item.title}</h2>
             <img src={this.state.item.img} alt="" />
             <p>{this.state.item.description}</p>
-            <p>${this.state.item.cost}</p>
+            <p>${this.state.item.cost} <span className="text-success">{this.state.item.inCart && '(' + this.state.item.qty + ' in cart)'}</span></p>
             <div className="btn-group btn-group-sm">
               <AddToCart item={this.state.item} />
               <Link href={'/'} className="btn btn-default">Continue Shopping</Link>
