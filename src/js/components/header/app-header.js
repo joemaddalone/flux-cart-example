@@ -1,7 +1,7 @@
 /** @jsx React.DOM */
 'use strict';
 var React = require('react'),
-    CartSummary = require('../components/app-cartsummary');
+    CartSummary = require('./app-cartsummary');
 
 var Header =
   React.createClass({

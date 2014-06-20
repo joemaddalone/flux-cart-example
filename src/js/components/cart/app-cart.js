@@ -1,7 +1,7 @@
 /** @jsx React.DOM */
 'use strict';
 var React = require('react'),
-    AppStore = require('../stores/app-store'),
+    AppStore = require('../../stores/app-store'),
     Increase = require('./app-increase'),
     Decrease = require('./app-decrease'),
     RemoveFromCart = require('./app-removefromcart'),

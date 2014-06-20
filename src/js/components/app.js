@@ -2,9 +2,9 @@
 'use strict';
 var React = require('react'),
     Header = require('./app-header'),
-    Catalog = require('./app-catalog'),
-    Cart = require('./app-cart'),
-    CatalogDetail = require('./app-catalogdetail'),
+    Catalog = require('./catalog/app-catalog'),
+    Cart = require('./cart/app-cart'),
+    CatalogDetail = require('./product/app-catalogdetail'),
     Router = require('react-router-component'),
     Template = require('./app-template');
 

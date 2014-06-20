@@ -2,7 +2,7 @@
 'use strict';
 var React =require('react'),
     Link = require('react-router-component').Link,
-    AppStore = require('../stores/app-store');
+    AppStore = require('../../stores/app-store');
 
 function CartTotals(){
   return AppStore.getCartTotals();

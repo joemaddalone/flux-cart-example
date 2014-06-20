@@ -3,7 +3,7 @@
 var React = require('react'),
     AddToCart = require('./app-addtocart.js'),
     Link = require('react-router-component').Link,
-    AppStore = require('../stores/app-store.js');
+    AppStore = require('../../stores/app-store.js');
 
 
 function getCatalogItem(index){
