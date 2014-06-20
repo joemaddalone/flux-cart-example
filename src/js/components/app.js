@@ -1,7 +1,6 @@
 /** @jsx React.DOM */
 'use strict';
 var React = require('react'),
-    Header = require('./app-header'),
     Catalog = require('./catalog/app-catalog'),
     Cart = require('./cart/app-cart'),
     CatalogDetail = require('./product/app-catalogdetail'),

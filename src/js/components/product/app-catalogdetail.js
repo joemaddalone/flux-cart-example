@@ -1,7 +1,7 @@
 /** @jsx React.DOM */
 'use strict';
 var React = require('react'),
-    AddToCart = require('./app-addtocart.js'),
+    AddToCart = require('../catalog/app-addtocart.js'),
     Link = require('react-router-component').Link,
     AppStore = require('../../stores/app-store.js');
 

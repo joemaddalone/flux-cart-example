@@ -1,7 +1,7 @@
 /** @jsx React.DOM */
 'use strict';
 var React = require('react'),
-    Header = require('../components/app-header.js');
+    Header = require('./header/app-header.js');
 
 var Template =
   React.createClass({
