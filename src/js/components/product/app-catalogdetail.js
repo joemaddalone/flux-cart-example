@@ -6,8 +6,12 @@ var React = require('react'),
     AppStore = require('../../stores/app-store.js');
 
 
-function getCatalogItem(index){
-  return {item: AppStore.getCatalog()[index]};
+function getCatalogItem(id){
+  var thisItem;
+  AppStore.getCatalog().forEach(function(item){
+    if(item.id.toString()===id)  {thisItem = item;}
+  });
+  return {item: thisItem};
 }
 
 var CatalogDetail =

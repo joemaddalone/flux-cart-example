@@ -17,7 +17,7 @@ var APP =
       /* jshint ignore:start */
       return (
         <Template>
-        <Locations hash>
+        <Locations>
           <Location path="/" handler={Catalog} />
           <Location path="/cart" handler={Cart} />
           <Location path="/item/:item" handler={CatalogDetail} />

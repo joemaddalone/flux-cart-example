@@ -50,6 +50,7 @@ var Cart =
       /* jshint ignore:start */
       return (
         <div>
+        <h2>Cart</h2>
           <table className="table">
           <thead>
             <tr>

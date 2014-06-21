@@ -11,7 +11,7 @@ var _catalog = [];
 
 for(var i=1; i<9; i++){
   _catalog.push({
-    'id': i,
+    'id': 'Widget' +i,
     'title':'Widget #' + i,
     'summary': 'This is an awesome widget!',
     'description': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, commodi.',
