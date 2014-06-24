@@ -71,7 +71,7 @@ var Cart =
             </tr>
           </tfoot>
           </table>
-          <Link href={'/'}>Continue Shopping</Link>
+          <Link href='/'>Continue Shopping</Link>
         </div>
         )
       /* jshint ignore:end */

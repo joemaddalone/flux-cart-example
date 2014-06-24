@@ -26,7 +26,7 @@ var CartSummary =
       /* jshint ignore:start */
       return  (<div>
                 <Link
-                href={'/cart'}
+                href='/cart'
                 className="btn btn-success">
                 Cart : Items: {this.state.qty} / ${this.state.total}
               </Link>
