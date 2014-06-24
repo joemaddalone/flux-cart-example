@@ -3,31 +3,21 @@
 var React = require('react'),
     AddToCart = require('../catalog/app-addtocart.js'),
     Link = require('react-router-component').Link,
-    AppStore = require('../../stores/app-store.js');
+    AppStore = require('../../stores/app-store.js'),
+    StoreWatchMixin = require('../../mixins/StoreWatchMixin.js');
 
 
-function getCatalogItem(id){
+function getCatalogItem(component){
   var thisItem;
   AppStore.getCatalog().forEach(function(item){
-    if(item.id.toString()===id)  {thisItem = item;}
+    if(item.id.toString()===component.props.item)  {thisItem = item;}
   });
   return {item: thisItem};
 }
 
 var CatalogDetail =
   React.createClass({
-    getInitialState:function(){
-      return getCatalogItem(this.props.item);
-    },
-    componentWillMount:function(){
-      AppStore.addChangeListener(this._onChange);
-    },
-    componentWillUnmount:function(){
-      AppStore.removeChangeListener(this._onChange);
-    },
-    _onChange:function(){
-      this.setState(getCatalogItem(this.props.item));
-    },
+    mixins: [new StoreWatchMixin(getCatalogItem)],
     render:function(){
       /* jshint ignore:start */
       return (
