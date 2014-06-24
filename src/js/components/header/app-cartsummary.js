@@ -2,7 +2,8 @@
 'use strict';
 var React =require('react'),
     Link = require('react-router-component').Link,
-    AppStore = require('../../stores/app-store');
+    AppStore = require('../../stores/app-store'),
+    StoreWatchMixin = require('../../mixins/StoreWatchMixin.js');
 
 function CartTotals(){
   return AppStore.getCartTotals();
@@ -10,18 +11,7 @@ function CartTotals(){
 
 var CartSummary =
   React.createClass({
-    getInitialState:function(){
-      return new CartTotals();
-    },
-    componentWillMount:function(){
-      AppStore.addChangeListener(this._onChange);
-    },
-    componentWillUnmount:function(){
-      AppStore.removeChangeListener(this._onChange);
-    },
-    _onChange:function(){
-      this.setState(new CartTotals());
-    },
+    mixins: [new StoreWatchMixin(CartTotals)],
     render:function(){
       /* jshint ignore:start */
       return  (<div>
