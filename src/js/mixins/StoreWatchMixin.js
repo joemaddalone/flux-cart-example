@@ -3,6 +3,10 @@
 var React = require('react');
 var AppStore = require('../stores/app-store.js');
 
+/*
+this could be more robust and accept multiple stores
+and the Listener event as an arg.
+ */
 var StoreWatchMixin = function(cb){
   return {
     getInitialState:function(){
