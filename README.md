@@ -1,3 +1,5 @@
+This is getting pretty outdated, see updated version here: https://github.com/joemaddalone/egghead-flux-architecture
+
 flux-cart-example
 =================
 
